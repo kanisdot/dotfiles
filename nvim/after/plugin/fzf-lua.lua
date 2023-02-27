@@ -16,7 +16,7 @@ set_keymap('n', 'gd', '<cmd>FzfLua lsp_definitions<CR>', opts)
 set_keymap('n', 'gr', '<cmd>FzfLua lsp_references<CR>', opts)
 set_keymap('n', 'gt', '<cmd>FzfLua lsp_typedefs<CR>', opts)
 set_keymap('n', 'gi', '<cmd>FzfLua lsp_implementations<CR>', opts)
-set_keymap('n', 'ga', '<cmd>FzfLua lsp_code_actions<CR>', opts)
+-- set_keymap('n', 'ga', '<cmd>FzfLua lsp_code_actions<CR>', opts)
 
 require'fzf-lua'.setup {
   winopts = {
@@ -30,7 +30,7 @@ require'fzf-lua'.setup {
     end,
   },
   files = {
-    cmd = 'fdfind'
+    cmd = 'fdfind --type file'
   },
   grep = {
     rg_opts = "--column --line-number --no-heading --color=always --smart-case --max-columns=512 -g '!*lock*'",
